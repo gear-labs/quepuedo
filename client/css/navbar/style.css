@@ -1,0 +1,72 @@
+/**************************************************************
+************************** NAVBAR *****************************
+**************************************************************/
+@media(max-width: 767px) {
+	.navbar-header {
+		background: #FFF !important;
+		color: #000;
+		height: 50px;
+	}
+
+	.navbar-header:hover .navbar-brand,
+	.navbar-header:hover .arrow {
+		color: #000 !important;
+	}
+
+	.navbar-header .navbar-brand:hover {
+		background: #FFF;
+	}
+
+	.brand {
+		display: inline-block;
+		width: 50%;
+	}
+
+	.toggle-navigation {
+		display: inline-block;
+		background: #428bca;
+		float: right;
+		height: 50px;
+		margin-top: 0;
+		width: 50%;
+	}
+	.toggle-navigation .icon-bar {
+		background-color: #FFF !important;
+	}
+}
+
+@media(max-width: 514px){
+	.brand {
+		width: 70%;
+	}
+	.toggle-navigation {
+		width: 30%;
+	}
+}
+
+@media(max-width: 373px){
+	.brand {
+		width: 83%;
+	}
+	.toggle-navigation {
+		text-align: right;
+		width: 17%;
+	}
+	.toggle-navigation .navbar-toggle {
+		padding-right: 5px;
+	}
+}
+
+@media(max-width: 320px){
+	.brand {
+		width: 84%;
+	}
+	.toggle-navigation {
+		text-align: right;
+		width: 16%;
+	}
+	.toggle-navigation .navbar-toggle {
+		padding-right: 0px;
+	}
+}
+

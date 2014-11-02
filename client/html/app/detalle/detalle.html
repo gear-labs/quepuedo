@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {HEAD}
+        <link rel="stylesheet" type="text/css" lhref="client/css/index/style.css">
+        <script lsrc="client/js/plugins/bootstrap.min.js" ></script>
+        <script lsrc="client/js/index/main.js" type="text/javascript"></script>
+        <script lsrc="client/js/index/separator.js" type="text/javascript"></script>  
+    </head>
+    <body class="metro">
+        
+        {HEADER}
+
+        <div class="search-back">
+            <div class="search-back-layer">
+            </div>
+            <div class="search-form-content">
+                <img id="logo" lsrc="client/images/quepuedo.png" />
+            </div>
+         <div class="contenido">
+    	 	<div class="registro"><img lsrc="client/images/rest/honolulu.jpg"></div>
+    	 	
+
+            <div class="type-add">
+                 <ul id="tab-filtro" class="nav nav-tabs perfil" role="tablist">
+                    <li class="active">
+                        <a href="#events" role="tab" data-toggle="tab">Info</a>
+                    </li>
+                    <li>
+                        <a href="#ingresar" role="tab" data-toggle="tab">Organizador</a>
+                    </li>
+                    <li>
+                        <a href="#mapa" role="tab" data-toggle="tab">Como llegar?</a>
+                    </li>
+                </ul>
+                <div class="tab-content perfil">
+                    <div class="tab-pane active" id="events">
+                       <h3 class="titulo">Nombre de evento o comida</h3>
+                       <p class="descripcion">Este evento tiene ajo, pimienta, cebolla, tomate y se desarrollara un ampplio sistem de gestion para comer luego de toddo el baile</p> 
+                       <h3 class="precio">Precio: Gs<span>22.000</span></h3> 
+                    </div>
+                    <div class="tab-pane" id="ingresar">
+                        <h3 class="titulo">Honolulu</h3>
+                        <a href="process.php?action=perfil">Ver perfil de Organizador</a>
+                    </div>
+                    <div class="tab-pane" id="mapa">
+                        <article class="registro" id="uno">
+                           
+                        </article>
+                    </div>
+                </div>
+                </div>
+            </div>
+    	 </div>
+        </div>
+        
+
+        <script>
+            $(document).on( 'ready', function(){
+                $('#myTab a').click(function ( e ) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                });
+            });
+        </script>
+    </body>
+</html>

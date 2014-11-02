@@ -1,0 +1,129 @@
+/**************************************************************
+*************         REGISTRO CSS STYLE          *************
+***************************************************************/
+body {
+	background-color: #1a4259;
+}
+.contenido-registro{
+	text-align:center;
+	padding:90px 10px;
+	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+	-ie-box-sizing: border-box;
+}
+article.registro{
+	width: 300px;
+	height:auto;
+	background: white;
+	border-radius: 5px;
+	margin: 0px auto;
+	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+	-ie-box-sizing: border-box;
+	padding: 20px;
+}
+#dos{
+	display: none;
+}
+.contenido-registro button{
+	margin-top: 20px;
+	width: 90px;
+	padding: 10px;
+	border-radius: 5px;
+	height: auto;
+}
+h1{
+	color: grey;
+	font-family: tahoma;
+	margin-bottom: 20px;
+}
+
+button#rg{
+	width: 50%;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	background: orange;
+	border-radius: 10px 0 10px 0;
+	margin: 0px auto;
+	border:0;
+	color: white;
+	margin-bottom:15px;
+}
+h3{
+	color: #5e5e5e;
+	font-weight: bold;
+	margin-bottom: 15px;
+	font-family: arial;
+}
+select.cel{
+	width: 40%;
+	float: left;
+	border-radius: 10px 0 0px 0;
+	height: 36px;
+}
+div.celular{
+	width: 90%;
+	height: auto;
+	margin:0px auto 15px;
+
+}
+input.numero{
+	float: right;
+	width: 60%;
+	border-radius: 0px 0 10px 0;
+}
+@media( max-width:320px ) {
+
+section.contenido{
+	padding:4% 2%;
+}
+article.registro{
+	width: 100%;
+	padding:4% 2%;
+}
+}	
+/*   mi formulario   */
+form.agregar{
+width:380px;
+margin:0px auto;
+padding:10px;
+}
+form.agregar input, textarea, select, button.agregar{
+color: #5e5e5e;
+padding-top: 9px;
+padding-bottom: 7px;
+font-size: 16px;
+line-height: 16px;
+font-weight: bold;
+width: 100%;
+border: 1px;
+border-radius: 10px 0 10px 0;
+text-align: center;
+margin-bottom: 15px;
+outline:0px;
+-webkit-box-shadow: 2px 2px 2px 2px #999;
+  -moz-box-shadow: 2px 2px 2px 2px #999;
+  filter: shadow(color=#999999, direction=135, strength=2);
+ 
+}
+textarea{
+height:80px;
+resize: vertical;}
+label{
+text-align:left;
+float:left;
+line-height:40px;
+}
+select{
+width:60%;
+float:right;}
+@media( max-width:450px ) {
+form.agregar{
+width:90%;
+}
+form.agregar select{
+width:100%}
+}

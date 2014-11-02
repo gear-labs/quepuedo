@@ -1,0 +1,109 @@
+<!DOCTYPE>
+<html lang="es">
+	<head>
+  {HEAD}
+		<link rel="stylesheet" type="text/css" lhref="client/css/perfil/estilo.css">
+	</head>
+	<body>
+		<header>
+    		{HEADER}
+		<section class="content">
+			<article class="datos">
+				<article class="logo-empresa">
+					<img lsrc="client/images/rest/honolulu.jpg" alt="honolulu">
+				</article>
+				<p class="nombre-empresa">Honolulu Carmelitas</p>
+			</article>
+			<article class="info">
+				<div id="tabs">
+ 					 <ul class="empresa-info">
+    					<li><a href="#tabs-1">Menu</a></li>
+   						<li><a href="#tabs-2">Informacion</a></li>
+   						<li><a href="#tabs-3">Mapa</a></li>
+  					</ul>
+  					<div id="tabs-1">
+    					<p class="menu-titulo"><br/><br/>Picadas</p>
+    					<article class="portada-menu">
+    						<img src="images/comidas/picada.jpg" alt="picada">
+    					</article>
+    					<ul class="menu-info">
+  							<li class="grey" >
+   								 <h4>Aros de cebolla</h4>
+    						<span>₲12.000</span></li>
+  							<li class="grey">
+    							<h4>Bolitas de papa</h4>
+    						<span>₲12.000</span></li>
+  							<li>
+    							<h4>Mandioca frita al ajo con queso</h4>
+   							 <span>₲12.000</span></li>
+  							<li >
+    							<h4>Masa urbana</h4>
+   							 <span>₲15.000</span>
+    						<p>Masa de ajo, toque de ají y otros.</p>
+ 							 </li>
+  							<li class="grey">
+    							<h4>Papas fritas</h4>
+    						<span>₲8.000</span></li>
+  							<li class="grey">
+    							<h4>Papas fritas con queso y verdeo</h4>
+    						<span>₲15.000</span></li>
+						</ul>
+						<article class="portada-menu">
+    						<img src="images/comidas/hamburguesa.jpg" alt="picada">
+    					</article>
+    					<ul class="menu-info">
+  							<li class="grey" >
+   								 <h4>Hamburguesa Completa</h4>
+    						<span>₲12.000</span></li>
+  							<li class="grey">
+    							<h4>Hamburguesa Simple</h4>
+    						<span>₲12.000</span></li>
+  							<li>
+    							<h4>Hamburguesa Doble</h4>
+   							 <span>₲12.000</span></li>
+  							<li >
+    							<h4>Hamburguesa Bacon</h4>
+   							 <span>₲15.000</span>
+    						<p>Masa de ajo, toque de ají y otros.</p>
+ 							 </li>
+  							<li class="grey">
+    							<h4>Hamburguesa de Pollo</h4>
+    						<span>₲8.000</span></li>
+  							<li class="grey">
+    							<h4>Hamburguesa de Pescado</h4>
+    						<span>₲15.000</span></li>
+						</ul>
+  					</div>
+  					<div id="tabs-2">
+    					<p><br/><br/>info</p>
+  					</div>
+  					<div id="tabs-3">
+    					<p><br/><br/>mapa</p>
+  					</div>
+				</div>
+			</article>
+		</section>
+		<footer>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+			<script>
+    		$(function() {
+        		var btn_movil = $('#nav-mobile'),
+           		 menu = $('#menu').find('ul');
+       			 btn_movil.on('click', function (e) {
+           		 e.preventDefault();
+
+            	var el = $(this);
+
+           		 el.toggleClass('nav-active');
+           		 menu.toggleClass('open-menu');
+       			 })
+
+   			 });
+  			$(function() {
+    			$( "#tabs" ).tabs();
+  			});
+  			</script>
+	</body>
+</html>

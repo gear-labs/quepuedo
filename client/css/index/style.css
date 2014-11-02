@@ -1,0 +1,555 @@
+.block {
+	display: block !important;
+}
+
+.metro-tile {
+	display: inline-block;
+	float: none;
+}
+
+@media (max-width: 945px) {
+	.metro-tile.double {
+		width: 300px;
+	}
+}
+
+@media( max-width: 700px ){
+	.metro-tile.double{
+		width: 100%;
+	}
+}
+
+#lo-que-podes {
+	width: 100%;
+}
+
+/**************************************************************
+************************** SEARCH *****************************
+**************************************************************/
+.search-back {
+	background: url('../../images/resources/back-asu.jpg') no-repeat center fixed;
+	height: 600px;
+	opacity: 1;
+	position: relative;
+	z-index: 0;
+}
+@media( max-width: 945px ) {
+	.search-back {
+		background: url('../../images/resources/back-asu.jpg') fixed;
+	}
+}
+.search-back-layer {
+
+	height: 600px;
+	opacity: .6;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+#search-form {
+	color: #FFF;
+	margin: auto;
+	text-align: center;
+	width: 80%;
+}
+
+#logo {
+	display: block;
+	margin: 50px auto 10px;
+	max-height: 150px;
+}
+
+@media( max-width: 945px ) {
+	#logo {
+		max-height: 120px;
+	}
+}
+
+#search-form .form-control {
+	background: #FFF;
+	border-radius: 24px 0 0 24px;
+	display: inline-block;
+	color: #000;
+	font-family: 'Roboto Light', Arial, Georgia;
+	font-size: 18px;
+	height: 50px;
+	margin: .3em auto;
+	width: 60%;
+}
+
+#search-form a {
+	text-decoration: none;
+}
+
+#search-form a img {
+	max-height: 25px;
+}
+.quepuedo-boton {
+	cursor: pointer;
+	vertical-align: middle !important;
+	display: inline-block;
+	background-color: #FFF;
+	border-radius: 0 24px 24px 0;
+	height: 50px;
+	line-height: 2;
+
+}
+.quepuedo-boton.btn-xlg {
+	margin-bottom: 4px;
+	padding: 11px 19px;
+}
+
+@media(max-width: 900px) {
+	#search-form {
+		width: 100%;
+	}
+
+	#search-form .form-control{
+		width: 70%;
+	}
+
+	.quepuedo-boton.btn-xlg {
+		margin-bottom: 4px;
+		padding: 11px 8px;
+	}
+}
+.nav-tabs {
+	border-bottom: 0;
+}
+#tab-filtro.nav.nav-tabs, 
+.tab-content {
+	margin: auto;
+	width: 60%;
+	text-align: center;
+}
+#tab-filtro.nav.nav-tabs.perfil, 
+.tab-content.perfil {
+	float: left;
+	width: 300px;
+}
+.tab-content.perfil {
+	margin: auto;
+	width: 100%;
+	
+}
+@media(max-width: 900px) {
+	#tab-filtro.nav.nav-tabs, 
+.tab-content {
+		width: 100%;
+	}
+}
+
+#tab-filtro.nav-tabs > li {
+	float: none;
+}
+
+#tab-filtro.nav > li {
+	display: inline-block;
+}
+
+#tab-filtro.nav-tabs > li > a {
+	background: #ECECEC;
+	color: #000;
+}
+
+#tab-filtro.nav-tabs > li > a:hover {
+	background: #FFF;
+	color: #555;
+}
+
+#tab-filtro.nav-tabs > li.active > a {
+	background: #FFF;
+	color: #555;
+}
+
+.tab-content {
+	background: #FFF;
+	height: auto;
+	border-radius: 9px;
+}
+
+.tab-content.perfil {
+	background: #FFF;
+	height: auto;
+	border-radius: 9px;
+	width: 100%;
+}
+
+
+.tab-content .checkbox-container {
+	text-align: center;
+}
+
+.tab-content input[ type='checkbox' ] {
+	margin: 15px 5px 0 15px;
+	-ms-transform: scale(1.3); /* IE */
+	-moz-transform: scale(1.3); /* FF */
+	-webkit-transform: scale(1.3); /* Safari and Chrome */
+	-o-transform: scale(1.3); /* Opera */
+	transform: scale(1.3);
+}
+
+@media( max-width: 945px ) {
+	.tab-content {
+		height: auto;
+		padding-bottom: 25px;
+	}
+
+	.tab-content .checkbox-container {
+		display: inline-block;
+		margin: auto;
+		text-align: left;
+	}
+
+	.checkbox-container span {
+		display: block;
+		font-size: 14px;
+	}
+
+	.tab-content input[ type='checkbox' ] {
+		margin: 15px 10px;
+		-ms-transform: scale(2); /* IE */
+		-moz-transform: scale(2); /* FF */
+		-webkit-transform: scale(2); /* Safari and Chrome */
+		-o-transform: scale(2); /* Opera */
+		transform: scale(2);
+	}
+}
+
+/**************************************************************
+*********************** EVENTS PROMO **************************
+**************************************************************/
+#events-promo {
+	background: #FFFFFF;
+	border: 3px solid #EEE;
+	box-shadow: 0 0 50px rgba( 0, 0, 0, 1 );
+	display: block;
+	margin: -160px auto 0;
+	text-align: center;
+	position: relative;
+	border-radius: 10px;
+}
+
+#events-promo.busqueda {
+	margin: -530px auto 0;
+}
+
+@media( max-width: 945px ) {
+	#events-promo {
+		
+		display: block;
+	}
+}
+
+#events-promo .metro-tile .food-img {
+	width: 100%;
+}
+
+#events-promo .metro-tile .restaurant-img {
+	max-width: 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.restaurant-img-busqueda {
+	max-width: 150px;
+	position: absolute;
+	left: 0px;
+	top: 0;
+}
+
+#events-promo .metro-tile .description-bg {
+	background: rgba( 0, 0, 0, .7 );
+	bottom: 0;
+	height: 40%;
+	position: absolute;
+	width: 100%;
+}
+#events-promo .metro-tile .description-bg-busqueda{
+	background: rgba( 0, 0, 0, .7 );
+	top: 0;
+	height: 40%;
+	position: absolute;
+	width: 85.5%;
+	right: 0;
+}
+@media( max-width: 945px ) {
+	#events-promo .metro-tile .description-bg-busqueda{
+		background: rgba( 0, 0, 0, .7 );
+		bottom: 0;
+		height: 40%;
+		position: absolute;
+		width: 100%;
+		top: initial;
+	}
+	.restaurant-img-busqueda {
+	max-width: 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	}
+
+}
+
+#events-promo .metro-tile .description-name,
+#events-promo .metro-tile .description-price {
+	display: block;
+	font-size: 18px;
+}
+
+.metro-tile.double {
+	height: 150px;
+}
+
+/**************************************************************
+************* Cuanto Puedo CheckBox and controls  *************
+***************************************************************/
+
+input[type=checkbox].quepuedo-checkbox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].quepuedo-checkbox + label.quepuedo-label {
+	padding-left: 25px;
+	height: 20px; 
+	display: inline-block;
+	line-height: 20px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 12pt;
+	vertical-align: middle;
+	cursor: pointer;
+	margin: 15px 10px;
+}
+input[type=checkbox].quepuedo-checkbox:checked + label.quepuedo-label {
+	background-position: 0 -20px;
+}
+label.quepuedo-label {
+	background-image:url(../../images/resources/quepuedo-checkbox.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;		
+}
+@media( max-width: 945px ) {
+
+	input[ type='checkbox' ] {
+		margin: 15px 10px;
+		-ms-transform: scale(2); /* IE */
+		-moz-transform: scale(2); /* FF */
+		-webkit-transform: scale(2); /* Safari and Chrome */
+		-o-transform: scale(2); /* Opera */
+		transform: scale(2);
+	}
+}
+.cuantopuedo {
+	display: inline-block;
+	width: 1.700em;
+	height: 1.850em;
+	line-height: 1.700em;
+	min-width: 1.700em;
+	font-weight: normal;
+	text-align: center;
+	text-shadow: 0 1px 0 white;
+	vertical-align: middle;
+	background-color: #eeeeee;
+	border: 1px solid #ccc;	
+}
+@media( max-width: 945px ) {
+
+	.cuantopuedo {
+		margin-right: -5px !important;
+	}
+}
+@media( max-width: 345px ) {
+	.metro-tile-group.two, .metro-tile-group.double {
+		width: auto;
+		margin-left: auto;
+	}
+}
+.cuantopuedo-input {
+	text-align: right;
+	display: inline-block;
+	margin-bottom: 0;
+	position: relative;
+	vertical-align: middle;
+	background-color: white;
+	border: 1px solid #cccccc;
+	font-size: 12pt;
+	width: 130px;
+	border-radius: 21px 0 0 21px;
+
+}
+.cuantopuedo-input:focus {
+	background: #FFF;
+	border: 1px solid #cccccc;
+	outline: 0;
+	color: #000;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+/**************************************************************
+************* Selccion de tipo de cuenta a crear  *************
+***************************************************************/
+div.contenido, .suggest{
+	text-align:center;
+	padding:20px 10px;
+	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+	-ie-box-sizing: border-box;
+}
+div.registro{	
+		background: white;
+		text-align:center;
+		width:200px;
+		border:1px solid white;
+		display:inline-block;
+		margin:10px;
+		-moz-box-sizing: border-box;
+  		-webkit-box-sizing: border-box;
+  		box-sizing: border-box;
+		-ie-box-sizing: border-box;
+		height: 200px;
+		border-radius: 5px;
+		vertical-align: middle;
+	}
+	div.registro img{	
+		width: 100%;
+		height: 100%;
+	}
+div.type-add{	
+		background: white;
+		text-align:center;
+		width:400px;
+		padding:10px;
+		border:1px solid white;
+		display:inline-block;
+		margin:10px;
+		-moz-box-sizing: border-box;
+  		-webkit-box-sizing: border-box;
+  		box-sizing: border-box;
+		-ie-box-sizing: border-box;
+		height: 250px;
+		border-radius: 5px;
+		vertical-align: middle;
+	}
+div.xq{
+	width: 550px;
+	height:150px;
+	text-align: center;
+	background: white;
+	margin: 0px auto;
+	border-radius: 5px;
+}
+
+@media( max-width: 945px ) {
+	.select-type {
+		height: auto;
+		padding-bottom: 25px;
+	}
+
+	.checkbox-container span {
+		display: block;
+		font-size: 14px;
+	}
+}
+@media( max-width:580px ) {
+	div.xq{
+		width:100%;
+		height: auto;
+		-moz-box-sizing: border-box;
+  		-webkit-box-sizing: border-box;
+  		box-sizing: border-box;
+		-ie-box-sizing: border-box;
+		padding: 10px;
+	}
+
+}
+
+/* comentaaaaaario*/
+
+section.content{
+	width: 90%;
+	background: white;
+	height:1000px;
+	padding: 20px;
+	margin: 30px auto;
+	border-radius: 20px;
+	position: relative;}
+article.datos{
+	width: 100%;
+	height: 150px;
+}
+article.info{
+	width:60%;
+	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+	-ie-box-sizing: border-box;
+	padding: 10px;
+}
+article.logo-empresa{
+	width: 95px;
+	height: 95px;
+	border: 1px solid grey;
+	float: left;
+	margin: 0px 20px 20px 0px;
+
+}
+.portada-menu{
+width: 100%;
+height: auto;
+margin: 10px 0px;
+}
+.portada-menu img{
+	width: 100%;
+}
+.logo-empresa img{
+	width: 100%;
+}
+p.nombre-empresa{
+	font-size:170%;
+	color: black;
+	text-align: left;
+	margin:0 0 1px;	
+}
+p.horario-atencion{
+	font-size:130%;
+	color: black;
+	text-align: left;	
+}
+ul.empresa-info{
+	float: left;
+	border-bottom: 1px solid lightgrey;
+	width: 280px;
+	height: 35px;
+}
+ul.empresa-info li{
+	float: left;
+	list-style: none;
+}
+ul.empresa-info li a{
+	text-decoration: none;
+	color: black;
+	padding: 10px 15px;
+}
+ul.empresa-info a:hover {
+	border-bottom: 3px solid #43A6DF;
+}
+.metro-tile-group.perfil {
+	width: 100%;
+}
+h3.titulo{
+	color: #000;
+}
+h3.precio {
+	color: #000;
+}
+h3.precio span {
+	color: green;
+}

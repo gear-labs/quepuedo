@@ -1,0 +1,216 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#logo{
+    display: block;
+    float: left;
+    line-height: 50px;
+    padding: 0px 10px;
+    color: grey;
+    margin-left: 20px;
+    font-family:'Open Sans';
+    font-size: 20px;
+    text-decoration: none;
+}
+
+header{
+    background:white;
+    height:50px;
+    position: relative;
+    width: 100%;
+    z-index: 2
+}
+
+/**************************************
+contenido
+****************************************/
+section.content{
+	width: 90%;
+	background: white;
+	height:1000px;
+	padding: 20px;
+	margin: 30px auto;
+	border-radius: 20px;
+	position: relative;}
+article.datos{
+	width: 100%;
+	height: 120px;
+    margin-top: 20px;
+}
+article.info{
+	width:60%;
+	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+	-ie-box-sizing: border-box;
+	padding: 10px;
+}
+article.logo-empresa{
+	width: 95px;
+	height: 95px;
+	border: 1px solid grey;
+	float: left;
+	margin: 0px 20px 20px 0px;
+
+}
+.portada-menu{
+width: 100%;
+height: auto;
+margin: 10px 0px;
+}
+.portada-menu img{
+	width: 100%;
+}
+.logo-empresa img{
+	width: 100%;
+}
+p.nombre-empresa{
+	font-size:150%;
+	color: black;
+}
+ul.empresa-info{
+	float: left;
+	border-bottom: 1px solid lightgrey;
+	width: 280px;
+	height: 35px;
+}
+ul.empresa-info li{
+	float: left;
+	list-style: none;
+}
+ul.empresa-info li a{
+	text-decoration: none;
+	color: black;
+	padding: 10px 15px;
+}
+ul.empresa-info a:hover {
+	border-bottom: 3px solid #43A6DF;
+}
+p.menu-titulo{
+	font-size: 18px;
+	color:#555858;
+	padding: 20px 0px;
+	font-weight: bold;
+}
+ul.menu-info{
+width: 100%;
+}
+ul.menu-info li{
+float: left;
+width: 49%;
+list-style: none;
+display:block;
+margin-right:1%;
+	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+	-ie-box-sizing: border-box;
+	padding: 10px 2px;
+}
+ul.menu-info span{
+width: 29%;
+float: right;
+text-align: right;
+line-height: 1.7;
+}
+ul.menu-info p{
+	text-align: center;
+}
+h4{
+	float: left;
+	width: 70%;
+	margin: .2em 0;
+	padding: 0;
+	line-height: 1.4;
+
+}
+li.grey{
+	background: rgba(192,192,192,.3);
+}
+@media only screen and (max-width: 768px) {
+	article.info{
+		width: 100%;
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width : 480px){
+ul.menu-info li{
+	width: 100%;
+	margin: 5px 0px;
+}
+article.content{
+	width: 95%;
+	height: auto;
+	margin: 0px auto;
+}
+}
+
+
+
+/******************************************
+menu
+*****************************************/
+#menu{float: right;}   
+    #menu ul{
+        list-style: none;
+        font-size: 14px;
+    }
+        #menu li{
+           display: block;
+           float: left;
+           text-transform: uppercase;
+           text-align: center;
+        }
+            #menu li a{
+                display: block;
+                color:grey;
+                text-decoration: none;
+                height: 50px;
+                line-height: 50px;
+                padding: 0 26px;
+            }
+            #menu li a:hover{
+                background: #43A6DF;
+                color:white;
+			}	
+
+        #nav-mobile.nav-active{
+            opacity: 1;
+        }
+@media only screen and (max-width: 768px) {
+    #nav-mobile{ display: block; }
+    #menu{
+        width: 100%;
+        float: none;
+        padding-top: 50px;
+    }
+        #menu ul{
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+            box-shadow: 0 1px 2px rgba(0,0,0,.5);
+            max-height: 0;
+            overflow: hidden;
+        }
+            #menu li{
+                background:white;
+                border-top: 1px solid lightgrey;
+                float: none;
+            }
+            #menu li:last-child{ border-bottom: 0;}
+                #menu li a{
+                    padding: 15px 10px;
+                    height: auto;
+                    line-height: normal;
+                    text-align:left;
+
+                }
+                #menu li a:hover{background:#2a2d33}
+        #menu ul.open-menu{
+            max-height: 400px;
+            -webkit-transition: max-height .4s;
+            -moz-transition: max-height .4s;
+            -ms-transition: max-height .4s;
+            -o-transition: max-height .4s;
+            transition: max-height .4s;
+        }
+}

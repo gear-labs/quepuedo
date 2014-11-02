@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {HEAD}
+        <link rel="stylesheet" type="text/css" lhref="client/css/index/style.css">
+        <script lsrc="client/js/plugins/bootstrap.min.js" ></script>
+        <script lsrc="client/js/index/main.js" type="text/javascript"></script>
+        <script lsrc="client/js/index/separator.js" type="text/javascript"></script>  
+    </head>
+    <body class="metro">
+        
+        {HEADER}
+
+        <div class="search-back">
+            <div class="search-back-layer">
+            </div>
+            <div class="search-form-content">
+                <img id="logo" lsrc="client/images/quepuedo.png" />
+                <form id="search-form">
+                    <input type="text" class="form-control" placeholder="Comidas, Eventos, Precio, Ciudad" />
+                    <a lhref="process.php?action=busqueda" class="quepuedo-boton btn-primary btn-xlg">
+                        <img lsrc="client/images/resources/search.png" alt="Buscar" />
+                    </a>
+                </form>
+
+                <!-- Nav tabs -->
+                <ul id="tab-filtro" class="nav nav-tabs" role="tablist">
+                    <li class="active">
+                        <a href="#events" role="tab" data-toggle="tab">Eventos</a>
+                    </li>
+                    <li>
+                        <a href="#para-comer" role="tab" data-toggle="tab">Para comer</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="events">
+                        <br />
+                        <label>Que puedo con <input type="number" class="cuantopuedo-input" data-type="integer" placeholder="20.000" onkeyup = "quepuedoSeparar(this,this.value.charAt(this.value.length-1))"/><span class="cuantopuedo">Gs</span>
+                        </label>
+                        <br />
+                        
+                        <div class="checkbox-container">
+                           <input type="checkbox" name="arteyespec" id="arteyespec" class="quepuedo-checkbox" /><label for="arteyespec" class="quepuedo-label">Arte y espectáculo</label>
+                           <input type="checkbox" name="deport" id="deport" class="quepuedo-checkbox" /><label for="deport" class="quepuedo-label">Deportes</label>
+                           <input type="checkbox" name="educ" id="educ" class="quepuedo-checkbox" /><label for="educ" class="quepuedo-label">Educación</label>
+                           <input type="checkbox" name="tec" id="tec" class="quepuedo-checkbox" /><label for="tec" class="quepuedo-label">Tecnología</label>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="para-comer">
+                        <br />
+                        <label>Que puedo con <input type="number" class="cuantopuedo-input" data-type="integer" placeholder="20.000" onkeyup = "quepuedoSeparar(this,this.value.charAt(this.value.length-1))"/><span class="cuantopuedo">Gs</span>
+                        </label>
+                        <br />
+                        
+                        <div class="checkbox-container">
+                           <input type="checkbox" name="desayuno" id="desayuno" class="quepuedo-checkbox" /><label for="desayuno" class="quepuedo-label">Desayuno y merienda</label>
+                           <input type="checkbox" name="almuerzo" id="almuerzo" class="quepuedo-checkbox" /><label for="almuerzo" class="quepuedo-label">Almuerzo</label>
+                           <input type="checkbox" name="cena" id="cena" class="quepuedo-checkbox" /><label for="cena" class="quepuedo-label">Cena</label>
+                           <input type="checkbox" name="fastfood" id="fastfood" class="quepuedo-checkbox" /><label for="fastfood" class="quepuedo-label">Comida rápida</label>
+                           <input type="checkbox" name="postres" id="postres" class="quepuedo-checkbox" /><label for="postres" class="quepuedo-label">Postres</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <section class="container" id="events-promo">
+        <h3>Lo que podes Ahora!</h3>
+            <div id="lo-que-podes" class="metro-tile-group">
+                {PromoList}
+            </div>
+            
+        </section>
+
+        <script>
+            $(document).on( 'ready', function(){
+                $('#myTab a').click(function ( e ) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                });
+            });
+        </script>
+    </body>
+</html>

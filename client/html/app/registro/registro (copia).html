@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {HEAD}
+        <link rel="stylesheet" type="text/css" lhref="client/css/registro/style.css">
+        <script lsrc="client/js/plugins/bootstrap.min.js" ></script>
+        <script lsrc="client/js/index/main.js" type="text/javascript"></script>
+        <script lsrc="client/js/index/separator.js" type="text/javascript"></script>  
+    </head>
+    <body>
+        {HEADER}
+        <section class="contenido-registro">
+            <article class="registro" id="uno">
+                <form action="#">
+                <input type="text" name="usuario-" value=""  autocomplete="on"  placeholder="Usuario">
+                <input type="email" name="e-Mail" value=""  autocomplete="on"  placeholder="E-Mail">
+                <input type="password" name="contrasenha" value=""  autocomplete="on"  placeholder="Contraseña">
+                <input type="password" name="confirmar-contrasenha" value=""  autocomplete="on"  placeholder="Confirmar Contraseña">
+                </form>
+                   <button type="button" onclick="ocultar()">Siguiente</button>
+            </article>
+
+            <article class="registro" id="dos"><form action="#">
+                <input type="text" name="usuario-" value=""  autocomplete="on"  placeholder="Empresa o Restaurant">
+                <input type="email" name="e-Mail" value=""  autocomplete="on"  placeholder="Administrador">
+                <input type="email" name="e-Mail" value=""  autocomplete="on"  placeholder="Nº. Cédula">
+                <input type="text" name="contrasenha" value=""  autocomplete="on"  placeholder="Direccion">
+                <select  class="required" id="IdCiudad" name="IdCiudad">
+                    <option value="">-- Seleccione ciudad --</option>
+
+                        <optgroup label="Capital">
+
+                            <option value="151">Asunción</option>
+
+                        </optgroup>
+                        <optgroup label="Central">
+
+                            <option value="230">Areguá</option>
+                            <option value="231">Capiatá</option>
+                            <option value="232">Fernando de la Mora</option>
+                            <option value="233">Guarambaré</option>
+                            <option value="235">Itá</option>
+                            <option value="236">Itauguá</option>
+                            <option value="237">Julián Augusto Saldívar</option>
+                            <option value="238">Lambaré</option>
+                            <option value="239">Limpio</option>
+                            <option value="240">Luque</option>
+                            <option value="241">Mariano Roque Alonso</option>
+                            <option value="243">Nueva Italia</option>
+                            <option value="242">Ñemby</option>
+                            <option value="244">San Antonio</option>
+                            <option value="245">San Lorenzo</option>
+                            <option value="246">Villa Elisa</option>
+                            <option value="247">Villeta</option>
+                            <option value="248">Ypacaraí</option>
+                            <option value="249">Ypané</option>
+
+                        </optgroup>                     
+                        <optgroup label="Alto Paraguay">
+
+                            <option value="152">Bahía Negra</option>
+                            <option value="153">Capitán Carmelo Peralta</option>
+                            <option value="155">Fuerte Olimpo</option>
+                            <option value="154">La Victoria</option>
+
+                        </optgroup>
+                        <optgroup label="Alto Paraná">
+
+                            <option value="156">Ciudad del Este</option>
+                            <option value="157">Doctor Juan León Mallorquín</option>
+                            <option value="158">Domingo Martínez de Irala</option>
+                            <option value="159">Hernandarias</option>
+                            <option value="160">Iruña</option>
+                            <option value="161">Itakyry</option>
+                            <option value="162">Juan Emilio O'Leary</option>
+                            <option value="163">Los Cedrales</option>
+                            <option value="164">Mbaracayú</option>
+                            <option value="165">Minga Guazú</option>
+                            <option value="166">Minga Porá</option>
+                            <option value="167">Naranjal</option>
+                            <option value="168">Ñacunday</option>
+                            <option value="169">Presidente Franco</option>
+                            <option value="170">San Alberto</option>
+                            <option value="171">San Cristóbal</option>
+                            <option value="172">Santa Fe del Paraná</option>
+                            <option value="173">Santa Rita</option>
+                            <option value="174">Santa Rosa del Monday</option>
+                            <option value="175">Tavapy</option>
+                            <option value="176">Yguazú</option>
+
+                        </optgroup>
+                        <optgroup label="Amambay">
+
+                            <option value="177">Bella Vista</option>
+                            <option value="178">Capitán Bado</option>
+                            <option value="179">Pedro Juan Caballero</option>
+                            <option value="180">Zanja Pytá</option>
+
+                        </optgroup>
+                        <optgroup label="Boquerón">
+
+                            <option value="181">Filadelfia</option>
+                            <option value="182">Loma Plata</option>
+                            <option value="183">Mariscal Estigarribia</option>
+
+                        </optgroup>
+                        <optgroup label="Caaguazú">
+
+                            <option value="184">Caaguazú</option>
+                            <option value="185">Carayaó</option>
+                            <option value="186">Coronel Oviedo</option>
+                            <option value="187">Doctor Cecilio Báez</option>
+                            <option value="188">Doctor J. Eulogio Estigarribia</option>
+                            <option value="189">Doctor Juan Manuel Frutos</option>
+                            <option value="190">José Domingo Ocampos</option>
+                            <option value="191">La Pastora</option>
+                            <option value="192">Mcal. Francisco S. López</option>
+                            <option value="193">Nueva Londres</option>
+                            <option value="194">Nueva Toledo</option>
+                            <option value="197">R. I. Tres Corrales</option>
+                            <option value="195">Raúl Arsenio Oviedo</option>
+                            <option value="196">Repatriación</option>
+                            <option value="198">San Joaquín</option>
+                            <option value="199">San José de los Arroyos</option>
+                            <option value="200">Santa Rosa del Mbutuy</option>
+                            <option value="201">Simón Bolívar</option>
+                            <option value="202">Tembiaporá</option>
+                            <option value="203">Tres de Febrero</option>
+                            <option value="204">Vaquería</option>
+                            <option value="205">Yhú</option>
+
+                        </optgroup>
+                        <optgroup label="Caazapá">
+
+                            <option value="206">Abaí</option>
+                            <option value="207">Buena Vista</option>
+                            <option value="208">Caazapá</option>
+                            <option value="209">Doctor Moisés S. Bertoni</option>
+                            <option value="210">Fulgencio Yegros</option>
+                            <option value="211">General Higinio Morínigo</option>
+                            <option value="212">Maciel</option>
+                            <option value="214">San Juan Nepomuceno</option>
+                            <option value="215">Tavaí</option>
+                            <option value="217">Yuty</option>
+
+                        </optgroup>
+                        <optgroup label="Canindeyú">
+
+                            <option value="218">Corpus Christi</option>
+                            <option value="219">Curuguaty</option>
+                            <option value="220">Gral. Francisco Caballero Álvarez</option>
+                            <option value="221">Itanará</option>
+                            <option value="222">Katueté</option>
+                            <option value="223">La Paloma</option>
+                            <option value="224">Nueva Esperanza</option>
+                            <option value="225">Salto del Guairá</option>
+                            <option value="226">Villa Ygatimí</option>
+                            <option value="228">Yasy Cañy</option>
+                            <option value="229">Ypejhú</option>
+
+                        </optgroup>
+                        <optgroup label="Concepción">
+
+                            <option value="271">Azotey</option>
+                            <option value="272">Belén</option>
+                            <option value="273">Concepción</option>
+                            <option value="274">Horqueta</option>
+                            <option value="275">Loreto</option>
+                            <option value="276">San Carlos del Apa</option>
+                            <option value="278">San Lázaro</option>
+                            <option value="280">Sargento José Félix López</option>
+                            <option value="279">Yby Yaú</option>
+
+                        </optgroup>
+                        <optgroup label="Cordillera">
+
+                            <option value="250">Altos</option>
+                            <option value="251">Arroyos y Esteros</option>
+                            <option value="252">Atyrá</option>
+                            <option value="253">Caacupé</option>
+                            <option value="254">Caraguatay</option>
+                            <option value="255">Emboscada</option>
+                            <option value="256">Eusebio Ayala</option>
+                            <option value="257">Isla Pucú</option>
+                            <option value="258">Itacurubí de la Cordillera</option>
+                            <option value="260">Juan de Mena</option>
+                            <option value="261">Loma Grande</option>
+                            <option value="262">Mbocayaty del Yhaguy</option>
+                            <option value="263">Nueva Colombia</option>
+                            <option value="264">Piribebuy</option>
+                            <option value="265">Primero de Marzo</option>
+                            <option value="266">San Bernardino</option>
+                            <option value="267">San José Obrero</option>
+                            <option value="268">Santa Elena</option>
+                            <option value="269">Tobatí</option>
+                            <option value="270">Valenzuela</option>
+
+                        </optgroup>
+                        <optgroup label="Guairá">
+
+                            <option value="281">Borja</option>
+                            <option value="283">Coronel Martínez</option>
+                            <option value="284">Dr. Bottrell</option>
+                            <option value="285">Fassardi</option>
+                            <option value="286">Félix Pérez Cardozo</option>
+                            <option value="287">Garay</option>
+                            <option value="282">Independencia</option>
+                            <option value="288">Itapé</option>
+                            <option value="290">Iturbe</option>
+                            <option value="291">Mbocayaty</option>
+                            <option value="292">Natalicio Talavera</option>
+                            <option value="293">Ñumí</option>
+                            <option value="294">Paso Yobái</option>
+                            <option value="295">San Salvador</option>
+                            <option value="296">Tebicuary</option>
+                            <option value="297">Troche</option>
+                            <option value="298">Villarrica</option>
+                            <option value="299">Yataity</option>
+
+                        </optgroup>
+                        <optgroup label="Itapúa">
+
+                            <option value="300">Alto Verá</option>
+                            <option value="301">Bella Vista</option>
+                            <option value="302">Cambyretá</option>
+                            <option value="303">Capitán Meza</option>
+                            <option value="304">Capitán Miranda</option>
+                            <option value="305">Carlos Antonio López</option>
+                            <option value="306">Carmen del Paraná</option>
+                            <option value="307">Coronel Bogado</option>
+                            <option value="308">Edelira</option>
+                            <option value="310">Encarnación</option>
+                            <option value="311">Fram</option>
+                            <option value="312">General Artigas</option>
+                            <option value="313">General Delgado</option>
+                            <option value="314">Hohenau</option>
+                            <option value="315">Itapúa Poty</option>
+                            <option value="316">Jesús</option>
+                            <option value="318">José Leandro Oviedo</option>
+                            <option value="317">La Paz</option>
+                            <option value="319">Mayor Otaño</option>
+                            <option value="320">Natalio</option>
+                            <option value="321">Nueva Alborada</option>
+                            <option value="322">Obligado</option>
+                            <option value="323">Pirapó</option>
+                            <option value="324">San Cosme y Damián</option>
+                            <option value="325">San Juan del Paraná</option>
+                            <option value="326">San Pedro del Paraná</option>
+                            <option value="327">San Rafael del Paraná</option>
+                            <option value="328">Tomás Romero Pereira</option>
+                            <option value="329">Trinidad</option>
+                            <option value="330">Yatytay</option>
+
+                        </optgroup>
+                        <optgroup label="Misiones">
+
+                            <option value="393">Ayolas</option>
+                            <option value="394">San Ignacio</option>
+                            <option value="395">San Juan Bautista</option>
+                            <option value="396">San Miguel</option>
+                            <option value="397">San Patricio</option>
+                            <option value="398">Santa María</option>
+                            <option value="399">Santa Rosa</option>
+                            <option value="400">Santiago</option>
+                            <option value="401">Villa Florida</option>
+                            <option value="402">Yabebyry</option>
+
+                        </optgroup>
+                        <optgroup label="Ñeembucú">
+
+                            <option value="332">Alberdi</option>
+                            <option value="333">Cerrito</option>
+                            <option value="334">Desmochados</option>
+                            <option value="335">General José Eduvigis Díaz</option>
+                            <option value="336">Guazú Cuá</option>
+                            <option value="337">Humaitá</option>
+                            <option value="338">Isla Umbú</option>
+                            <option value="339">Laureles</option>
+                            <option value="340">Mayor José J. Martínez</option>
+                            <option value="341">Paso de Patria</option>
+                            <option value="342">Pilar</option>
+                            <option value="343">San Juan Bautista del Ñeembucú</option>
+                            <option value="344">Tacuaras</option>
+                            <option value="345">Villa Franca</option>
+                            <option value="347">Villa Oliva</option>
+                            <option value="346">Villalbín</option>
+
+                        </optgroup>
+                        <optgroup label="Paraguarí">
+
+                            <option value="348">Acahay</option>
+                            <option value="349">Caapucú</option>
+                            <option value="350">Carapeguá</option>
+                            <option value="351">Escobar</option>
+                            <option value="352">Gral. Bernardino Caballero</option>
+                            <option value="353">La Colmena</option>
+                            <option value="354">Mbuyapey</option>
+                            <option value="355">Paraguarí</option>
+                            <option value="356">Pirayú</option>
+                            <option value="357">Quiindy</option>
+                            <option value="358">Quyquyhó</option>
+                            <option value="359">San Roque González de Santa Cruz</option>
+                            <option value="360">Sapucai</option>
+                            <option value="361">Tebicuary-mí</option>
+                            <option value="362">Yaguarón</option>
+                            <option value="363">Ybycuí</option>
+                            <option value="364">Ybytymí</option>
+
+                        </optgroup>
+                        <optgroup label="Presidente Hayes">
+
+                            <option value="365">Benjamín Aceval</option>
+                            <option value="366">Dr. José Falcón</option>
+                            <option value="367">General José María Bruguez</option>
+                            <option value="368">Nanawa</option>
+                            <option value="369">Puerto Pinasco</option>
+                            <option value="371">Tte. Esteban Martínez</option>
+                            <option value="370">Tte. Irala Fernández</option>
+                            <option value="372">Villa Hayes</option>
+
+                        </optgroup>
+                        <optgroup label="San Pedro">
+
+                            <option value="373">Antequera</option>
+                            <option value="374">Capiibary</option>
+                            <option value="375">Choré</option>
+                            <option value="376">General Elizardo Aquino</option>
+                            <option value="377">General Isidoro Resquín</option>
+                            <option value="378">Guayaibí</option>
+                            <option value="379">Itacurubí del Rosario</option>
+                            <option value="380">Liberación</option>
+                            <option value="381">Lima</option>
+                            <option value="382">Nueva Germania</option>
+                            <option value="383">San Estanislao</option>
+                            <option value="384">San Pablo</option>
+                            <option value="385">San Pedro</option>
+                            <option value="386">Santa Rosa del Aguaray</option>
+                            <option value="387">Tacuatí</option>
+                            <option value="388">Unión</option>
+                            <option value="389">Veinticinco de Diciembre</option>
+                            <option value="390">Villa del Rosario</option>
+                            <option value="391">Yataity del Norte</option>
+                            <option value="392">Yrybucuá</option>
+
+                        </optgroup>
+          
+                </select>
+                <div class="celular">
+                <select name="prefijo-movil" class="cel">
+                    <optgroup label="Tigo">
+                        <option value="0981">0981</option>
+                        <option value="0982">0982</option>
+                        <option value="0983">0983</option>
+                        <option value="0984">0984</option>
+                        <option value="0985">0985</option>
+                        <option value="0986">0986</option>
+                    </optgroup>
+                    <optgroup label="Personal">
+                        <option value="0971">0971</option>
+                        <option value="0972">0972</option>
+                        <option value="0973">0973</option>
+                        <option value="0974">0974</option>
+                        <option value="0975">0975</option>
+                        <option value="0976">0976</option>
+                    </optgroup>
+                    <optgroup label="Claro">
+                        <option value="0991">0991</option>
+                        <option value="0992">0992</option>
+                        <option value="0993">0993</option>
+                        <option value="0994">0994</option>
+                        <option value="0995">0995</option>
+                    </optgroup>
+                    <optgroup label="Vox">
+                        <option value="0961">0961</option>
+                        <option value="0962">0962</option>
+                        <option value="0969">0969</option>
+                    </optgroup>
+                </select>
+                <input type="text" class="numero" placeholder="XXX-XXX">
+                </div>
+                <input type="text" placeholder="Teléfono">
+                </form>
+                <button type="button" onclick="window.location.href='process.php?action=registro2'" >Siguiente</button>
+            </article>
+            
+        </section>
+        <script>
+            $(document).on( 'ready', function(){
+                $('#myTab a').click(function ( e ) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                });
+            });
+        function ocultar() {
+        document.getElementById("uno").style.display = "none";
+        document.getElementById("dos").style.display = "block";
+        }
+        </script>
+            <script>
+
+</script>
+    </body>
+</html>

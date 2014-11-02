@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {HEAD}
+        <link rel="stylesheet" type="text/css" lhref="client/css/index/style.css">
+        <link rel="stylesheet" type="text/css" lhref="client/css/agregar/style.css">
+		<link rel="stylesheet" type="text/css" lhref="client/css/jquery-ui.min.css">
+        <script lsrc="client/js/plugins/bootstrap.min.js" ></script>
+		<script lsrc="client/js/plugins/jquery-ui.js" ></script>
+		
+        <script lsrc="client/js/index/main.js" type="text/javascript"></script>
+        <script lsrc="client/js/index/separator.js" type="text/javascript"></script>  
+    </head>
+    <body class="metro">
+        
+        {HEADER}
+
+        <div class="search-back">
+            <div class="search-back-layer">
+            </div>
+            <div class="search-form-content">
+                <img id="logo" lsrc="client/images/quepuedo.png" />
+                <form id="search-form">
+                   
+                </form>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                   <form action="#" class="agregar">
+					<input type="text" name="nombre-evento" placeholder="Nombre del Evento">
+					<textarea name="descripcion" placeholder="Descripcion"></textarea>
+					<input type="text" name="fecha" id="datepicker" placeholder="Fecha">
+					<input type="time" name="hora" value="11:45:00" max="22:30:00" min="10:00:00" step="1">
+					<label for="elejir">Tipo de Evento</label>
+					<select name="Tipo de Evento">
+						<option value="cumpleaños">Cumpleaños</option>
+						<option value="despedida">Despedida</option>
+						<option value="Sex party">Sex Party</option>
+						<option value="baby shower">Baby shower</option>
+					</select>
+					<button type="submit" class="agregar">Agregar</button>
+						
+				   </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).on( 'ready', function(){
+                $('#myTab a').click(function ( e ) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                });
+            });
+			 $(function() {
+				$( "#datepicker" ).datepicker();
+				});
+        </script>
+    </body>
+</html>
