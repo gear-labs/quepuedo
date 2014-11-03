@@ -13,6 +13,6 @@ return array(
 		'Host' 		=> 'localhost',
 		'User' 		=> '',
 		'Password'	=>	'',
-		'DB'		=> 'cp-db',
+		'DB'		=> 'que_puedo',
 	),
 );

@@ -5,6 +5,7 @@
 .metro-tile {
 	display: inline-block;
 	float: none;
+	color: #FFF;
 }
 
 @media (max-width: 945px) {
