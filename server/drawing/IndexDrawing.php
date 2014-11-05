@@ -37,10 +37,8 @@ class IndexDrawing extends Drawing
 	{
 		$foods = $this->myFood->getSearchFoods( $parameters );
 
-		while( $foods->hasNext() ) 
-		{		
-			$food = $foods->getNext();
-
+		foreach( $foods as $food ) 
+		{	
 			$this->list[] = array(
 				'Slug' => $food[ 'menu' ][ 'slug' ],
 				'Image' => $food[ 'menu' ][ 'image' ],
