@@ -86,7 +86,9 @@
 #search-form a img {
 	max-height: 25px;
 }
+
 .quepuedo-boton {
+	border: none;
 	cursor: pointer;
 	vertical-align: middle !important;
 	display: inline-block;
@@ -96,6 +98,11 @@
 	line-height: 2;
 
 }
+
+.quepuedo-boton:focus {
+	outline: none;
+}
+
 .quepuedo-boton.btn-xlg {
 	margin-bottom: 4px;
 	padding: 11px 19px;

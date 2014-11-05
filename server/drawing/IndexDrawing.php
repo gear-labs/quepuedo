@@ -29,8 +29,29 @@ class IndexDrawing extends Drawing
 			);
 		} // end while
 
-		$this->setList( 'promo' );
+		$this->setList( 'foods' );
 		$this->draw( 'PromoList' );
 	} // end drawPromoFoods
+
+	public function drawSearchFoods( $parameters, $isAJAX = false )
+	{
+		$foods = $this->myFood->getSearchFoods( $parameters );
+
+		while( $foods->hasNext() ) 
+		{		
+			$food = $foods->getNext();
+
+			$this->list[] = array(
+				'Slug' => $food[ 'menu' ][ 'slug' ],
+				'Image' => $food[ 'menu' ][ 'image' ],
+				'RestaurantLogo' => $food[ 'restaurant' ][ 'logo' ],
+				'Restaurant' => $food[ 'restaurant' ][ 'restaurant' ],
+				'Name' => $food[ 'menu' ][ 'name' ],
+				'Price' => $food[ 'menu' ][ 'price' ]
+			);
+		} // end while		
+		
+		return $this->list;
+	} // end drawSearchFoods
 
 }//end IndexDrawing

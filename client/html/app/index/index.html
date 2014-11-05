@@ -4,8 +4,9 @@
         {HEAD}
         <link rel="stylesheet" type="text/css" lhref="client/css/index/style.css">
         <script lsrc="client/js/plugins/bootstrap.min.js" ></script>
-        <script lsrc="client/js/index/main.js" type="text/javascript"></script>
-        <script lsrc="client/js/index/separator.js" type="text/javascript"></script>  
+        <script lsrc="client/js/index/tile-responsive.js" type="text/javascript"></script>
+        <script lsrc="client/js/index/separator.js" type="text/javascript"></script>
+        <script lsrc="client/js/index/search.js" type="text/javascript"></script>
     </head>
     <body class="metro">
         
@@ -17,52 +18,75 @@
             <div class="search-form-content">
                 <img id="logo" lsrc="client/images/quepuedo.png" />
                 <form id="search-form">
-                    <input type="text" class="form-control" placeholder="Comidas, Eventos, Precio, Ciudad" />
-                    <a lhref="process.php?action=busqueda" class="quepuedo-boton btn-primary btn-xlg">
+                    <input type="text" id="search-input" class="form-control" placeholder="Comidas, Eventos, Precio, Ciudad" />
+                    <button class="quepuedo-boton btn-primary btn-xlg">
                         <img lsrc="client/images/resources/search.png" alt="Buscar" />
-                    </a>
+                    </button>
                 </form>
 
                 <!-- Nav tabs -->
                 <ul id="tab-filtro" class="nav nav-tabs" role="tablist">
-                    <li class="active">
-                        <a href="#events" role="tab" data-toggle="tab">Eventos</a>
+                     <li class="active">
+                        <a href="#para-comer" role="tab" data-toggle="tab">Para comer</a>
                     </li>
                     <li>
-                        <a href="#para-comer" role="tab" data-toggle="tab">Para comer</a>
+                        <a href="#events" role="tab" data-toggle="tab">Eventos</a>
                     </li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div class="tab-pane active" id="events">
+
+                    <div class="tab-pane active" id="para-comer">
                         <br />
-                        <label>Que puedo con <input type="number" class="cuantopuedo-input" data-type="integer" placeholder="20.000" onkeyup = "quepuedoSeparar(this,this.value.charAt(this.value.length-1))"/><span class="cuantopuedo">Gs</span>
+                        <label>Que puedo con 
+                            <input type="number" id="amount" class="cuantopuedo-input" data-type="integer" placeholder="20.000" onkeyup = "quepuedoSeparar(this,this.value.charAt(this.value.length-1))"/>
+                            <span class="cuantopuedo">Gs</span>
                         </label>
                         <br />
                         
                         <div class="checkbox-container">
-                           <input type="checkbox" name="arteyespec" id="arteyespec" class="quepuedo-checkbox" /><label for="arteyespec" class="quepuedo-label">Arte y espectáculo</label>
-                           <input type="checkbox" name="deport" id="deport" class="quepuedo-checkbox" /><label for="deport" class="quepuedo-label">Deportes</label>
-                           <input type="checkbox" name="educ" id="educ" class="quepuedo-checkbox" /><label for="educ" class="quepuedo-label">Educación</label>
-                           <input type="checkbox" name="tec" id="tec" class="quepuedo-checkbox" /><label for="tec" class="quepuedo-label">Tecnología</label>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="para-comer">
+                            <input type="checkbox" name="desayuno_merienda" id="desayuno_merienda" class="quepuedo-checkbox" />
+                            <label for="desayuno_merienda" class="quepuedo-label">Desayuno y merienda</label>
+
+                           <input type="checkbox" name="almuerzo" id="almuerzo" class="quepuedo-checkbox" />
+                           <label for="almuerzo" class="quepuedo-label">Almuerzo</label>
+
+                           <input type="checkbox" name="cena" id="cena" class="quepuedo-checkbox" />
+                           <label for="cena" class="quepuedo-label">Cena</label>
+
+                           <input type="checkbox" name="fast-food" id="fast-food" class="quepuedo-checkbox" />
+                           <label for="fast-food" class="quepuedo-label">Comida rápida</label>
+
+                           <input type="checkbox" name="postres" id="postres" class="quepuedo-checkbox" />
+                           <label for="postres" class="quepuedo-label">Postres</label>
+                        </div> <!-- ./ .checkbox-container -->
+                    </div> <!-- ./ .tab-pane -->
+
+                    <div class="tab-pane" id="events">
                         <br />
-                        <label>Que puedo con <input type="number" class="cuantopuedo-input" data-type="integer" placeholder="20.000" onkeyup = "quepuedoSeparar(this,this.value.charAt(this.value.length-1))"/><span class="cuantopuedo">Gs</span>
+                        <label>Que puedo con 
+                            <input type="number" class="cuantopuedo-input" data-type="integer" placeholder="20.000" onkeyup = "quepuedoSeparar(this,this.value.charAt(this.value.length-1))"/>
+                            <span class="cuantopuedo">Gs</span>
                         </label>
                         <br />
                         
                         <div class="checkbox-container">
-                           <input type="checkbox" name="desayuno" id="desayuno" class="quepuedo-checkbox" /><label for="desayuno" class="quepuedo-label">Desayuno y merienda</label>
-                           <input type="checkbox" name="almuerzo" id="almuerzo" class="quepuedo-checkbox" /><label for="almuerzo" class="quepuedo-label">Almuerzo</label>
-                           <input type="checkbox" name="cena" id="cena" class="quepuedo-checkbox" /><label for="cena" class="quepuedo-label">Cena</label>
-                           <input type="checkbox" name="fastfood" id="fastfood" class="quepuedo-checkbox" /><label for="fastfood" class="quepuedo-label">Comida rápida</label>
-                           <input type="checkbox" name="postres" id="postres" class="quepuedo-checkbox" /><label for="postres" class="quepuedo-label">Postres</label>
-                        </div>
-                    </div>
-                </div>
+                           <input type="checkbox" value="arte_espectaculo" id="arte_espectaculo" class="quepuedo-checkbox" />
+                           <label for="arte_espectaculo" class="quepuedo-label">Arte y espectáculo</label>
+
+                           <input type="checkbox" value="deportes" id="deportes" class="quepuedo-checkbox" />
+                           <label for="deportes" class="quepuedo-label">Deportes</label>
+
+                           <input type="checkbox" value="educacion" id="educacion" class="quepuedo-checkbox" />
+                           <label for="educacion" class="quepuedo-label">Educación</label>
+
+                           <input type="checkbox" value="tecnologia" id="tecnologia" class="quepuedo-checkbox" />
+                           <label for="tecnologia" class="quepuedo-label">Tecnología</label>
+                        </div><!-- ./ .checkbox-container -->
+                    </div> <!-- ./ .tab-pane -->
+
+                </div><!-- ./ .tab-content -->
             </div>
         </div>
 
