@@ -19,7 +19,7 @@
                 <img id="logo" lsrc="client/images/quepuedo.png" />
                 <form id="search-form">
                     <input type="text" id="search-input" class="form-control" placeholder="Comidas, Eventos, Precio, Ciudad" />
-                    <button class="quepuedo-boton btn-primary btn-xlg">
+                    <button onclick="quepuedolink()" class="quepuedo-boton btn-primary btn-xlg">
                         <img lsrc="client/images/resources/search.png" alt="Buscar" />
                     </button>
                 </form>
@@ -98,7 +98,11 @@
             </div>
             
         </section>
-
+        <script type-"text/javascript">
+            function quepuedolink(e) {
+                window.location.href="#events-promo";
+            }
+        </script>
         <script>
             $(document).on( 'ready', function(){
                 $('#myTab a').click(function ( e ) {

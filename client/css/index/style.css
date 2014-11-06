@@ -28,7 +28,7 @@
 ************************** SEARCH *****************************
 **************************************************************/
 .search-back {
-	background: url('../../images/resources/back-asu.jpg') no-repeat center fixed;
+	background: url('../../images/resources/back-asu.jpg') repeat center fixed;
 	height: 600px;
 	opacity: 1;
 	position: relative;
