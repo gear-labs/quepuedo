@@ -16,8 +16,6 @@ $(document).on( 'ready', function(){
 			criteria.search = search.split( ' ' );
 			criteria.length += 1;
 		} // end if
-
-		console.log( criteria.search );
 		
 		if( $( '#amount' ).val() )
 		{
