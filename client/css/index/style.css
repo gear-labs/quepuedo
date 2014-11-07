@@ -571,7 +571,7 @@ section.comida-contenedor{
 }
 article.sintenedor{
 	display:inline-block; 
-	width: 250px;
+	width: 100%;
 	padding: 10px;
 }
 
@@ -646,3 +646,6 @@ input.fomrc{
 			width: 100%;
 		}
 	}
+#select-image{
+	margin-bottom: 10px;
+}
