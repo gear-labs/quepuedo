@@ -3,11 +3,7 @@
     <head>
         {HEAD}
         <link rel="stylesheet" type="text/css" lhref="client/css/index/style.css">
-        <link rel="stylesheet" type="text/css" lhref="client/css/agregar/style.css">
-		<link rel="stylesheet" type="text/css" lhref="client/css/jquery-ui.min.css">
         <script lsrc="client/js/plugins/bootstrap.min.js" ></script>
-		<script lsrc="client/js/plugins/jquery-ui.js" ></script>
-		
         <script lsrc="client/js/index/main.js" type="text/javascript"></script>
         <script lsrc="client/js/index/separator.js" type="text/javascript"></script>  
     </head>
@@ -20,30 +16,35 @@
             </div>
             <div class="search-form-content">
                 <img id="logo" lsrc="client/images/quepuedo.png" />
-                <form id="search-form">
-                   
-                </form>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                   <form action="#" class="agregar">
-					<input type="text" name="nombre-evento" placeholder="Nombre del Evento">
-					<textarea name="descripcion" placeholder="Descripcion"></textarea>
-					<input type="text" name="fecha" id="datepicker" placeholder="Fecha">
-					<input type="time" name="hora" value="11:45:00" max="22:30:00" min="10:00:00" step="1">
-					<label for="elejir">Tipo de Evento</label>
-					<select name="Tipo de Evento">
-						<option value="cumpleaños">Cumpleaños</option>
-						<option value="despedida">Despedida</option>
-						<option value="Sex party">Sex Party</option>
-						<option value="baby shower">Baby shower</option>
-					</select>
-					<button type="submit" class="agregar">Agregar</button>
-						
-				   </form>
-                </div>
             </div>
-        </div>
+         <div class="contenido">
+            <section class="comida-contenedor">
+                 <article class="sintenedor"><div class="comida-foto">
+                        <img lsrc="client/images/rest/honolulu.jpg">
+                    </div>
+                    <form class="comida-form">
+                    <input type="file" id="select-image" content="Seleccionar imagen">
+                    </form>
+                    <form class="comida-form">
+                        <input type="text" class="form2" placeholder="Nombre">
+                        <textarea placeholder="ingredientes" class="form2"></textarea>
+                        <p class="form2">Seleccione Categoria:</p>
+                        <div class="checkbox-container">
+                           <input type="checkbox" name="desayuno" id="desayuno" class="quepuedo-checkbox" /><label for="desayuno" class="quepuedo-label">Desayuno y merienda</label>
+                           <input type="checkbox" name="almuerzo" id="almuerzo" class="quepuedo-checkbox" /><label for="almuerzo" class="quepuedo-label">Almuerzo</label>
+                           <input type="checkbox" name="cena" id="cena" class="quepuedo-checkbox" /><label for="cena" class="quepuedo-label">Cena</label>
+                           <input type="checkbox" name="fastfood" id="fastfood" class="quepuedo-checkbox" /><label for="fastfood" class="quepuedo-label">Comida rápida</label>
+                           <input type="checkbox" name="postres" id="postres" class="quepuedo-checkbox" /><label for="postres" class="quepuedo-label">Postres</label>
+                        </div>
+                        <input type="number" class="form2" placeholder="Precio GS">
+                        <br />
+                    <button type="button">Guardar</button>
+                    </form>
+                </article>
+            </section>
+            
+         </div>
+        
 
         <script>
             $(document).on( 'ready', function(){
@@ -52,9 +53,6 @@
                     $(this).tab('show');
                 });
             });
-			 $(function() {
-				$( "#datepicker" ).datepicker();
-				});
         </script>
     </body>
 </html>
