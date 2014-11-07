@@ -2,33 +2,11 @@
 	display: block !important;
 }
 
-.metro-tile {
-	display: inline-block;
-	float: none;
-	color: #FFF;
-}
-
-@media (max-width: 945px) {
-	.metro-tile.double {
-		width: 300px;
-	}
-}
-
-@media( max-width: 700px ){
-	.metro-tile.double{
-		width: 100%;
-	}
-}
-
-#lo-que-podes {
-	width: 100%;
-}
-
 /**************************************************************
 ************************** SEARCH *****************************
 **************************************************************/
 .search-back {
-	background: url('../../images/resources/back-asu.jpg') repeat center fixed;
+	background: url('../../images/resources/back-asu.jpg') no-repeat center fixed;
 	height: 600px;
 	opacity: 1;
 	position: relative;
@@ -86,9 +64,7 @@
 #search-form a img {
 	max-height: 25px;
 }
-
 .quepuedo-boton {
-	border: none;
 	cursor: pointer;
 	vertical-align: middle !important;
 	display: inline-block;
@@ -98,11 +74,6 @@
 	line-height: 2;
 
 }
-
-.quepuedo-boton:focus {
-	outline: none;
-}
-
 .quepuedo-boton.btn-xlg {
 	margin-bottom: 4px;
 	padding: 11px 19px;
@@ -134,7 +105,7 @@
 #tab-filtro.nav.nav-tabs.perfil, 
 .tab-content.perfil {
 	float: left;
-	width: 300px;
+	border:0;
 }
 .tab-content.perfil {
 	margin: auto;
@@ -157,18 +128,20 @@
 }
 
 #tab-filtro.nav-tabs > li > a {
-	background: #ECECEC;
 	color: #000;
 }
 
 #tab-filtro.nav-tabs > li > a:hover {
-	background: #FFF;
-	color: #555;
+	background: #428bca;
+	color: white;
 }
 
 #tab-filtro.nav-tabs > li.active > a {
 	background: #FFF;
-	color: #555;
+	color:#428bca ;
+	border:0;
+	border-bottom: 2px solid #428bca;
+	border-radius: 0;
 }
 
 .tab-content {
@@ -225,6 +198,11 @@
 	}
 }
 
+
+
+
+
+
 /**************************************************************
 *********************** EVENTS PROMO **************************
 **************************************************************/
@@ -235,12 +213,15 @@
 	display: block;
 	margin: -160px auto 0;
 	text-align: center;
+	width: 80%;
 	position: relative;
 	border-radius: 10px;
 }
-
 #events-promo.busqueda {
 	margin: -530px auto 0;
+}
+.metro-tile.double.busqueda {
+	width: 100%;
 }
 
 @media( max-width: 945px ) {
@@ -371,6 +352,9 @@ label.quepuedo-label {
 	.cuantopuedo {
 		margin-right: -5px !important;
 	}
+	.metro-tile.double {
+		width: 100%;
+	}
 }
 @media( max-width: 345px ) {
 	.metro-tile-group.two, .metro-tile-group.double {
@@ -431,7 +415,7 @@ div.registro{
 		height: 100%;
 	}
 div.type-add{	
-		background: white;
+		background:white;
 		text-align:center;
 		width:400px;
 		padding:10px;
@@ -479,6 +463,22 @@ div.xq{
 
 }
 
+	@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 500px) {
+		div.type-add{
+			width: 90%;
+			margin: 0px auto;
+		}
+			#tab-filtro.nav.nav-tabs, 
+.tab-content{
+	width: 100%;
+}
+	#tab-filtro li{
+	width: 100%;
+	text-align: center;
+} 
+
+
+	}
 /* comentaaaaaario*/
 
 section.content{
@@ -561,3 +561,88 @@ h3.precio {
 h3.precio span {
 	color: green;
 }
+/*  agregar comida  */
+section.comida-contenedor{
+	width: 60%;
+	margin: 0px auto;
+	border-radius: 10px;
+	padding: 10px;
+	background: white;
+}
+article.sintenedor{
+	display:inline-block; 
+	width: 250px;
+	padding: 10px;
+}
+
+div.comida-foto{
+	width: 110px;
+	height: 110px;
+	margin: 40px auto;
+}
+.comida-foto img{
+	width: 100%;
+}
+.subir-comida::-webkit-file-upload-button {
+  display: none;
+}
+.subir-comida::file-upload-button {
+  display: none;
+}
+.subir-comida::before {
+  content: 'Selecionar Imagen';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  margin-left:20%;
+}
+.subir-comida:hover::before {
+  border-color: black;
+}
+.subir-comida-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+input.form2, textarea{
+	border-radius: 5px;
+	border: 2px solid grey;
+	width: 90%;
+	height: 40px;
+	margin-bottom: 10px;
+	padding: 2px;
+}
+textarea.form2{
+	resize:none;
+	height: 60px
+}
+p.fomr2{
+	width: 100%;
+	height: 30px;
+	color: grey;
+	background: blue;
+	text-align: left;
+}
+input.fomrc{
+	width:15px ;
+	border:1px solid grey;
+}
+	@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 800px) {
+		div.comida-foto{
+			margin: 10px auto;
+		}
+		section.comida-contenedor{
+		width: 90%;
+		margin: 0px auto;
+		}
+		article.sintenedor{
+			width: 100%;
+		}
+	}
