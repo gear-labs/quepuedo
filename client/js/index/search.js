@@ -49,6 +49,17 @@ $(document).on( 'ready', function(){
 
 });
 
+var html = '<a target="_blank" href="detalle/{Slug}">' +
+	'<div class="metro-tile double metro-bg-black metro-ol-hover-darkBlue">' +
+	    '<img class="food-img" src="client/images/comidas/{Image}" alt="" />' +
+	    '<img class="restaurant-img" src="client/images/restaurants/{RestaurantLogo}" alt="{Restaurant}" />' +
+	    '<div class="description-bg">' +
+	        '<span class="description-name">{Name}</span>' +
+	        '<span class="description-price">{Price}</span>' +
+	    '</div>' +
+	'</div>' +
+'</a>';
+
 function searchFoods( criteria ) {
 
 	criteria = JSON.stringify( criteria );
@@ -64,6 +75,19 @@ function searchFoods( criteria ) {
 		},
 		success: function( data ) {
 			console.log( data );
+			$( '#lo-que-podes' ).html( '' );
+			$(data).each( function( index, element ){
+				html_copia = html;
+
+				html_copia = html_copia.replace( '{Slug}', element.Slug );
+				html_copia = html_copia.replace( '{Image}', element.Image );
+				html_copia = html_copia.replace( '{RestaurantLogo}', element.RestaurantLogo );
+				html_copia = html_copia.replace( '{Restaurant}', element.Restaurant );
+				html_copia = html_copia.replace( '{Name}', element.Name );
+				html_copia = html_copia.replace( '{Price}', element.Price );
+
+				$( '#lo-que-podes' ).append( html_copia );
+			});
 		},
 		type: 'POST',
 		timeout: 10000,

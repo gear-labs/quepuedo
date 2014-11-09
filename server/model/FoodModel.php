@@ -52,6 +52,18 @@ class FoodModel
 		return GMongo::getRegisters( 'foods', $this->fields, $this->query );
 	} // end getSearchFoods
 
+
+	public function getFoodInfo( $foodSlug )
+	{
+		$fields = array(
+			'restaurant' => 1,
+			'info' => 1,
+			'menu' => 1,
+		);
+
+		return GMongo::getRegister( 'foods', $fields, array( 'menu.slug' => $foodSlug ) );
+	} // end getFoodInfo
+
 	private function rank( &$search )
 	{
 		// Resultados obtenidos con la búsqueda

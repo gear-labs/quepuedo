@@ -2,6 +2,10 @@
 	display: block !important;
 }
 
+#lo-que-podes a {
+	color: #FFF;
+}
+
 /**************************************************************
 ************************** SEARCH *****************************
 **************************************************************/
@@ -121,6 +125,7 @@
 
 #tab-filtro.nav-tabs > li {
 	float: none;
+	background: white;
 }
 
 #tab-filtro.nav > li {
@@ -132,8 +137,7 @@
 }
 
 #tab-filtro.nav-tabs > li > a:hover {
-	background: #428bca;
-	color: white;
+
 }
 
 #tab-filtro.nav-tabs > li.active > a {
@@ -417,7 +421,7 @@ div.registro{
 div.type-add{	
 		background:white;
 		text-align:center;
-		width:400px;
+		width: 500px;
 		padding:10px;
 		border:1px solid white;
 		display:inline-block;
@@ -426,7 +430,7 @@ div.type-add{
   		-webkit-box-sizing: border-box;
   		box-sizing: border-box;
 		-ie-box-sizing: border-box;
-		height: 250px;
+		height: 370px;
 		border-radius: 5px;
 		vertical-align: middle;
 	}
